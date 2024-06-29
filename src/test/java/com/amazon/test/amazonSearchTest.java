@@ -40,9 +40,9 @@ public class amazonSearchTest {
         ExtentTest test =  report.createTest("searchTest","search product in amazon");
         String input = "iPhone";
         amazonSearch as = new amazonSearch(driver);
-        as.searchOnAmazon(driver,input);
+        amazonSearch.searchOnAmazon(input);
         test.log(Status.INFO,"search functionality check on amazon application");
-        as.verifySearchedResultOnAmazon(driver,input);
+        amazonSearch.verifySearchedResultOnAmazon(input);
         test.log(Status.INFO,"validate search functionality check on amazon application");
         test.pass("search functionality", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
     }
